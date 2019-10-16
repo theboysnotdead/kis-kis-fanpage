@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist/",
-    "start": "parcel serve src/index.html --open"
+    "start": "parcel serve src/index.html --open",
+    "build": "npm run-script clean && parcel build src/index.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
     "url": "https://github.com/theboysnotdead/kis-kis-randomizer/issues"
   },
   "homepage": "https://github.com/theboysnotdead/kis-kis-randomizer#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "cssnano": "^4.1.10"
   }
 }
