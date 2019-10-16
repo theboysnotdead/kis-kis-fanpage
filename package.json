@@ -1,0 +1,24 @@
+{
+  "name": "kis-kis-randomizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf dist/",
+    "start": "parcel serve src/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theboysnotdead/kis-kis-randomizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theboysnotdead/kis-kis-randomizer/issues"
+  },
+  "homepage": "https://github.com/theboysnotdead/kis-kis-randomizer#readme",
+  "dependencies": {
+  }
+}
