@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist/",
     "start": "parcel serve src/index.html --open",
-    "build": "npm run-script clean && parcel build src/index.html"
+    "build": "npm run-script clean && npx parcel build src/index.html"
   },
   "repository": {
     "type": "git",
