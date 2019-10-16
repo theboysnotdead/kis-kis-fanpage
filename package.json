@@ -20,7 +20,9 @@
     "url": "https://github.com/theboysnotdead/kis-kis-randomizer/issues"
   },
   "homepage": "https://github.com/theboysnotdead/kis-kis-randomizer#readme",
-  "dependencies": {},
+  "dependencies": {
+    "rimraf": "^3.0.0"
+  },
   "devDependencies": {
     "cssnano": "^4.1.10"
   }
