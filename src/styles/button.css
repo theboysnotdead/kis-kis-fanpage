@@ -1,0 +1,70 @@
+.button {
+  position: relative;
+  display: inline-block;
+
+  font-family: "Uni", sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  
+  cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC')
+      14 0,
+    pointer;
+  user-select: none;
+
+  color: #212529;
+  background-color: #ffffff;
+
+  border-style: solid;
+  border-width: 4px;
+  border-image-slice: 2;
+  border-image-width: 2;
+  border-image-repeat: stretch;
+  border-image-source: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8" ?><svg version="1.1" width="5" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2 1 h1 v1 h-1 z M1 2 h1 v1 h-1 z M3 2 h1 v1 h-1 z M2 3 h1 v1 h-1 z" fill="rgb(33,37,41)" /></svg>');
+  border-image-outset: 2;
+
+  padding: 6px 8px;
+  margin: 4px;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  box-shadow: inset -4px -4px #adafbc;
+}
+
+.button::focus {
+  box-shadow: 0 0 0 6px rgba(#adafbc, 0.3);
+  outline: 0;
+}
+
+.button:hover {
+  color: #212529;
+  text-decoration: none;
+  background-color: #e7e7e7;
+}
+
+.button:hover::after {
+  box-shadow: inset -6px -6px #adafbc;
+}
+
+.button:active:not(.is-disabled)::after {
+  box-shadow: inset 4px 4px #adafbc;
+}
+
+/* for chrome */
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .button {
+    border-image-repeat: space;
+  }
+}
+
+/* for firefox */
+@supports (-moz-appearance: meterbar) {
+  .button {
+    border-image-repeat: stretch;
+  }
+}
