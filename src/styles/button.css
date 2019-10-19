@@ -51,7 +51,7 @@
   box-shadow: inset -6px -6px #adafbc;
 }
 
-.button:active:not(.is-disabled)::after {
+.button:active::after {
   box-shadow: inset 4px 4px #adafbc;
 }
 
