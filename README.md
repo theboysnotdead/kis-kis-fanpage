@@ -2,7 +2,7 @@
 We love kis kis band
 
 # Site
-https://theboysnotdead.github.io/kis-kis-randomizer/
+https://theboysnotdead.github.io/kis-kis-fanpage/
 
 # Guide
 
