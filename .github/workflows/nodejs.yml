@@ -18,3 +18,4 @@ jobs:
         BRANCH: gh-pages # The branch the action should deploy to.
         FOLDER: dist # The folder the action should deploy.
         BUILD_SCRIPT: npm install && npm run-script build # The build script the action should run prior to deploying.
+        YOUTUBE_API_TOKEN: ${{ secrets.YOUTUBE_API_TOKEN }}
