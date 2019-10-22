@@ -12,7 +12,8 @@
 *::after {
   box-sizing: inherit;
 
-  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease,
+    border-color 0.5s ease;
 }
 
 html,
@@ -153,7 +154,7 @@ html.is-dark .video_wrapper {
   border-color: var(--white-color);
 }
 
-.video_wrapper > h3 {
+.video_wrapper__title {
   position: absolute;
 
   top: -2rem;
@@ -170,7 +171,12 @@ html.is-dark .video_wrapper {
   padding: 0 0.5rem;
 }
 
-html.is-dark .video_wrapper > h3 {
+.video_wrapper__title mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+html.is-dark .video_wrapper__title {
   background-color: var(--dark-color);
 }
 

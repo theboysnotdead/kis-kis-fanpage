@@ -1,0 +1,65 @@
+mark {
+  --hue: 360;
+  --blur-r: 0.15em;
+  --main-sat: 50%;
+  --shadow-sat: 70%;
+
+  --main-light: 90%;
+  --main-shadow-light: 50%;
+  --mid-shadow-light: 40%;
+  --dark-shadow-light: 30%;
+
+  --main-shadow-color: hsl(
+    var(--hue),
+    var(--shadow-sat),
+    var(--main-shadow-light)
+  );
+
+  --mid-shadow-color: hsl(
+    var(--hue),
+    var(--shadow-sat),
+    var(--mid-shadow-light)
+  );
+
+  --dark-shadow-color: hsl(
+    var(--hue),
+    var(--shadow-sat),
+    var(--dark-shadow-light)
+  );
+
+  --color: hsl(var(--hue), 74%, var(--main-light));
+
+  --shadow: 0 0 var(--blur-r) var(--main-shadow-color),
+    0 0 calc(var(--blur-r) * 1) var(--mid-shadow-color),
+    0 0 calc(var(--blur-r) * 1.5) var(--main-shadow-color),
+    0 0 calc(var(--blur-r) * 2) var(--main-shadow-color),
+    0 0 calc(var(--blur-r) * 2.5) var(--main-shadow-color),
+    0 0 calc(var(--blur-r) * 3) var(--dark-shadow-color);
+
+  color: var(--color);
+  text-shadow: var(--shadow);
+}
+
+.video_wrapper__title mark {
+  animation: flicker 6s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  10%,
+  34%,
+  52%,
+  86% {
+    opacity: 0.9;
+    text-shadow: var(--shadow);
+  }
+
+  7%,
+  25%,
+  46%,
+  72%,
+  100% {
+    opacity: 0.2;
+    text-shadow: none;
+  }
+}
