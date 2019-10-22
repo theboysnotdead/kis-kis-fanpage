@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Build and Deploy
-      uses: theboysnotdead/github-pages-deploy-action@master
+      uses: theboysnotdead/github-pages-deploy-action@custom-build
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN_TWO }}
         BASE_BRANCH: dev # The branch the action should deploy from.
