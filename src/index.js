@@ -1,5 +1,14 @@
-const getRequestLink = youtubeApiKey =>
-  `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLP0Wif5xoBigovD_cj0LTn6Rf4M_1tpz8&key=${youtubeApiKey}`;
+const GITHUB_BUILD_ENV_NAME = 'GitHubEnv';
+
+let videoUrls = [
+  'QDJ6YqI3sjo',
+  'A-ouS-cBu8I',
+  '5yeBe1i9d1Y',
+  'S5QaJssasCw',
+  'wBVr-DwSFa8',
+  '7LQgJPFU5Mg',
+  'p6bQ1boyrew'
+];
 
 const initVideoPicker = videoLinks => {
   let currentId = Math.floor(Math.random() * videoLinks.length);
@@ -14,6 +23,10 @@ const initVideoPicker = videoLinks => {
   document.querySelector('#button_next').addEventListener('click', () => setSrcUrl(getNextId()));
 };
 
-fetch(getRequestLink(process.env.YOUTUBE_API_TOKEN))
-  .then(r => r.json())
-  .then(json => initVideoPicker(json.items.map(el => el.contentDetails.videoId)));
+if (process.env.KISKIS_BUILD_ENV === GITHUB_BUILD_ENV_NAME) {
+  const fetchedStr = process.env.FETCHED_DATA;
+  const jsonStr = fetchedStr.substring(fetchedStr.indexOf('{'));
+  videoUrls = JSON.parse(jsonStr).items.map(el => el.contentDetails.videoId);
+}
+
+initVideoPicker(videoUrls);

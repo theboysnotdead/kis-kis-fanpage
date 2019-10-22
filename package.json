@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist/",
     "start": "parcel serve src/index.html --open",
-    "build": "npm run-script clean && npx parcel build src/index.html --public-url ./"
+    "build": "npm run-script clean && npx parcel build src/index.html --public-url ./",
+    "buildci": "npm run-script clean && KISKIS_BUILD_ENV=GitHubEnv FETCHED_DATA=$(curl -i -H \"Accept: application/json\" \"https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&playlistId=PLP0Wif5xoBigovD_cj0LTn6Rf4M_1tpz8&key=$YOUTUBE_API_TOKEN\" | tr -d '\r') npx parcel build src/index.html --public-url ./"
   },
   "repository": {
     "type": "git",
