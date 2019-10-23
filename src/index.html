@@ -6,24 +6,27 @@
         <link rel="stylesheet" type="text/css" href="./styles/index.css">
         <link rel="stylesheet" type="text/css" href="./styles/button.css">
         <link rel="stylesheet" type="text/css" href="./styles/checkboxes.css">
+        <link rel="stylesheet" type="text/css" href="./styles/light-show.css">
         <link rel="shortcut icon" type="image/png" href="../assets/icon_40pt.png">
         <title>KIS KIS RANDOMIZER</title>
     </head>
     <body>
         <header class="header">
-            <label class="header__theme-label">
-                <input id="white-toggler" type="radio" class="checkbox" name="theme-type" checked />
-                <span>White</span>
-            </label>
-                
-            <label class="header__theme-label header__theme-label--dark">
-                <input id="dark-toggler" type="radio" class="checkbox is-dark" name="theme-type" />
-                <span>Dark</span>
-            </label>
+            <div class="header__theme-container">
+                <label class="header__theme-label">
+                    <input id="white-toggler" type="radio" class="checkbox" name="theme-type" checked />
+                    <span>White</span>
+                </label>
+                    
+                <label class="header__theme-label header__theme-label--dark">
+                    <input id="dark-toggler" type="radio" class="checkbox is-dark" name="theme-type" />
+                    <span>Dark</span>
+                </label>
+            </div>
         </header>
         <main class="main">
             <section class="video_wrapper">
-                <h3>We love Kis-Kis</h3> 
+                <h3 class="video_wrapper__title">We love <mark>Kis-Kis</mark></h3> 
                 <iframe 
                     id="video_element"
                     width="560"
