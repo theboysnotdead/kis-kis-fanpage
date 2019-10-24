@@ -1,49 +1,51 @@
+<!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./fonts/fonts.css">
-        <link rel="stylesheet" type="text/css" href="./styles/index.css">
-        <link rel="stylesheet" type="text/css" href="./styles/button.css">
-        <link rel="stylesheet" type="text/css" href="./styles/checkboxes.css">
-        <link rel="stylesheet" type="text/css" href="./styles/light-show.css">
-        <link rel="shortcut icon" type="image/png" href="../assets/icon_40pt.png">
-        <title>KIS KIS RANDOMIZER</title>
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__theme-container">
-                <label class="header__theme-label">
-                    <input id="white-toggler" type="radio" class="checkbox" name="theme-type" checked />
-                    <span>White</span>
-                </label>
-                    
-                <label class="header__theme-label header__theme-label--dark">
-                    <input id="dark-toggler" type="radio" class="checkbox is-dark" name="theme-type" />
-                    <span>Dark</span>
-                </label>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="We love Kis-Kis">
+    <meta property="og:title" content="Kis-Kis fun page">
+    <meta property="og:description" content="We love Kis-Kis">
+    <meta property="og:image" content="../assets/icon_40pt.png">
+    <link rel="stylesheet" type="text/css" href="./fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/button.css">
+    <link rel="stylesheet" type="text/css" href="./styles/checkboxes.css">
+    <link rel="stylesheet" type="text/css" href="./styles/light-show.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/icon_40pt.png">
+    <title>KIS KIS RANDOMIZER</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__theme-container">
+            <label class="header__theme-label">
+                <input id="white-toggler" type="radio" class="checkbox visibility-hidden" name="theme-type" checked />
+                <span>White</span>
+            </label>
+
+            <label class="header__theme-label header__theme-label--dark">
+                <input id="dark-toggler" type="radio" class="checkbox is-dark visibility-hidden" name="theme-type" />
+                <span>Dark</span>
+            </label>
+        </div>
+    </header>
+    <main class="main">
+        <section class="video_wrapper">
+            <h3 class="video_wrapper__title">We love <mark>Kis-Kis</mark></h3>
+            <iframe id="video_element" title="Official Kis-Kis videos" width="560" height="315" src="" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+
+            <div class="buttons_wrapper">
+                <button id="button_prev" type="button" class="button">Предыдущий</button>
+                <button id="button_next" type="button" class="button">Следующий</button>
             </div>
-        </header>
-        <main class="main">
-            <section class="video_wrapper">
-                <h3 class="video_wrapper__title">We love <mark>Kis-Kis</mark></h3> 
-                <iframe 
-                    id="video_element"
-                    width="560"
-                    height="315"
-                    src=""
-                    frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-    
-                <div class="buttons_wrapper">
-                    <button id="button_prev" type="button" class="button">Предыдущий</button>
-                    <button id="button_next" type="button" class="button">Следующий</button>
-                </div>
-            </section>
-        </main>
-        <script src="./js/index.js"></script>
-        <script src="./js/theme.js"></script>
-    </body>
+        </section>
+    </main>
+    <script src="./js/index.js"></script>
+    <script src="./js/theme.js"></script>
+</body>
+
 </html>
