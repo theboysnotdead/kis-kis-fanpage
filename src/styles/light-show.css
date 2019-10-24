@@ -1,5 +1,5 @@
 mark {
-  --hue: 360;
+  --hue: 321; /* our pink color */
   --blur-r: 0.15em;
   --main-sat: 50%;
   --shadow-sat: 70%;
