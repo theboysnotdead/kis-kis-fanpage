@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Uni";
-  src: url("../fonts/uni.woff") format("woff"),
-    url("../fonts/uni.ttf") format("opentype");
+  src: url("../fonts/uni.woff2") format("woff2"),
+    url("../fonts/uni.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
