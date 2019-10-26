@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kis-Kis fan page</title>
+    <title>KIS KIS FAN PAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="We love Kis-Kis">
     <meta property="og:title" content="Kis-Kis fan page">
@@ -12,30 +12,17 @@
     <meta property="og:image" content="https://github.com/theboysnotdead/kis-kis-fanpage/blob/dev/assets/kis-kis.jpg">
     <meta property="og:site_name" content="Kis-Kis_fanPage">
     <meta property="og:description" content="We love Kis-Kis">
-    <link rel="stylesheet" type="text/css" href="./fonts/fonts.css">
-    <link rel="stylesheet" type="text/css" href="./styles/index.css">
-    <link rel="stylesheet" type="text/css" href="./styles/button.css">
-    <link rel="stylesheet" type="text/css" href="./styles/checkboxes.css">
-    <link rel="stylesheet" type="text/css" href="./styles/light-show.css">
+    <link rel="stylesheet" type="text/css" href="./styles/index.scss">
     <link rel="shortcut icon" type="image/png" href="../assets/icon_40pt.png">
-    <title>KIS KIS RANDOMIZER</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__theme-container">
-            <label class="header__theme-label">
-                <input id="white-toggler" type="radio" class="checkbox visibility-hidden" name="theme-type" />
-                <span>White</span>
-            </label>
+    <input id="white-toggler" type="radio" class="checkbox checkbox--white visibility-hidden" name="theme-type" />
+    <label class="theme-label theme-label--white" for="white-toggler">White</label>
 
-            <label class="header__theme-label header__theme-label--dark">
-                <input id="dark-toggler" type="radio" class="checkbox is-dark visibility-hidden" name="theme-type"
-                    checked />
-                <span>Dark</span>
-            </label>
-        </div>
-    </header>
+    <input id="dark-toggler" type="radio" class="checkbox checkbox--dark visibility-hidden" name="theme-type" checked />
+    <label class="theme-label theme-label--dark" for="dark-toggler">Dark</label>
+
     <main class="main">
         <section class="video_wrapper">
             <h3 class="video_wrapper__title">We love <mark>Kis-Kis</mark></h3>
@@ -50,7 +37,6 @@
         </section>
     </main>
     <script src="./js/index.js"></script>
-    <script src="./js/theme.js"></script>
 </body>
 
 </html>
