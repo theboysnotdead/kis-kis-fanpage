@@ -1,0 +1,129 @@
+.checkbox {
+  margin-left: 28px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  & ~ label {
+    position: absolute;
+
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC")
+        14 0,
+      pointer;
+    user-select: none;
+  }
+
+  & ~ label::before,
+  &:checked ~ label::before {
+    position: absolute;
+
+    content: "";
+
+    top: 15px;
+    left: 5px;
+  }
+
+  & ~ label::before {
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
+      16px 2px, 2px 4px, 16px 4px, 2px 6px, 16px 6px, 2px 8px, 16px 8px,
+      2px 10px, 16px 10px, 2px 12px, 16px 12px, 2px 14px, 16px 14px, 2px 16px,
+      4px 16px, 6px 16px, 8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
+    transform: rotate(0.0001deg);
+  }
+
+  &:focus ~ label::before {
+    width: 2px;
+    height: 2px;
+    color: var(--shadow-color);
+    box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
+      16px 2px, 2px 4px, 16px 4px, 2px 6px, 16px 6px, 2px 8px, 16px 8px,
+      2px 10px, 16px 10px, 2px 12px, 16px 12px, 2px 14px, 16px 14px, 2px 16px,
+      4px 16px, 6px 16px, 8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
+    transform: rotate(0.0001deg);
+  }
+
+  &:checked ~ label::before {
+    width: 2px;
+    height: 2px;
+    transform: rotate(0.0001deg);
+  }
+
+  &:checked:focus ~ label::before {
+    width: 2px;
+    height: 2px;
+    transform: rotate(0.0001deg);
+  }
+
+  &--white + label,
+  &--white + label::before,
+  &--white:checked + label::before {
+    color: var(--dark-color);
+  }
+
+  &--white:checked + label::before {
+    box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
+      18px 2px, 20px 2px, 2px 4px, 16px 4px, 18px 4px, 20px 4px, 2px 6px,
+      14px 6px, 16px 6px, 2px 8px, 4px 8px, 12px 8px, 14px 8px, 2px 10px,
+      4px 10px, 6px 10px, 10px 10px, 12px 10px, 16px 10px, 2px 12px, 6px 12px,
+      8px 12px, 10px 12px, 16px 12px, 2px 14px, 8px 14px, 16px 14px, 2px 16px,
+      4px 16px, 6px 16px, 8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
+  }
+
+  &--white:checked:focus + label::before {
+    color: var(--shadow-color);
+    box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
+      18px 2px var(--dark-color), 20px 2px var(--dark-color), 2px 4px,
+      16px 4px var(--dark-color), 18px 4px var(--dark-color),
+      20px 4px var(--dark-color), 2px 6px var(--dark-color),
+      14px 6px var(--dark-color), 16px 6px var(--dark-color),
+      2px 8px var(--dark-color), 4px 8px var(--dark-color),
+      12px 8px var(--dark-color), 14px 8px var(--dark-color), 2px 10px,
+      4px 10px var(--dark-color), 6px 10px var(--dark-color),
+      10px 10px var(--dark-color), 12px 10px var(--dark-color), 16px 10px,
+      2px 12px, 6px 12px var(--dark-color), 8px 12px var(--dark-color),
+      10px 12px var(--dark-color), 16px 12px, 2px 14px,
+      8px 14px var(--dark-color), 16px 14px, 2px 16px, 4px 16px, 6px 16px,
+      8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
+  }
+
+  &--dark + label,
+  &--dark + label::before {
+    color: var(--white-color);
+  }
+
+  &--dark:checked + label::before {
+    color: var(--white-color);
+    box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
+      18px 2px var(--white-color), 20px 2px var(--white-color), 2px 4px,
+      16px 4px var(--white-color), 18px 4px var(--white-color),
+      20px 4px var(--white-color), 2px 6px var(--white-color),
+      14px 6px var(--white-color), 16px 6px var(--white-color),
+      2px 8px var(--white-color), 4px 8px var(--white-color),
+      12px 8px var(--white-color), 14px 8px var(--white-color), 2px 10px,
+      4px 10px var(--white-color), 6px 10px var(--white-color),
+      10px 10px var(--white-color), 12px 10px var(--white-color), 16px 10px,
+      2px 12px, 6px 12px var(--white-color), 8px 12px var(--white-color),
+      10px 12px var(--white-color), 16px 12px, 2px 14px,
+      8px 14px var(--white-color), 16px 14px, 2px 16px, 4px 16px, 6px 16px,
+      8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
+  }
+
+  &--dark:checked:focus + label::before {
+    color: var(--shadow-color);
+    box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
+      18px 2px var(--white-color), 20px 2px var(--white-color), 2px 4px,
+      16px 4px var(--white-color), 18px 4px var(--white-color),
+      20px 4px var(--white-color), 2px 6px var(--white-color),
+      14px 6px var(--white-color), 16px 6px var(--white-color),
+      2px 8px var(--white-color), 4px 8px var(--white-color),
+      12px 8px var(--white-color), 14px 8px var(--white-color), 2px 10px,
+      4px 10px var(--white-color), 6px 10px var(--white-color),
+      10px 10px var(--white-color), 12px 10px var(--white-color), 16px 10px,
+      2px 12px, 6px 12px var(--white-color), 8px 12px var(--white-color),
+      10px 12px var(--white-color), 16px 12px, 2px 14px,
+      8px 14px var(--white-color), 16px 14px, 2px 16px, 4px 16px, 6px 16px,
+      8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
+  }
+}
