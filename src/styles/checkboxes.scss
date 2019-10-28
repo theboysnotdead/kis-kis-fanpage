@@ -56,13 +56,13 @@
     transform: rotate(0.0001deg);
   }
 
-  &--white ~ label.theme-label--white,
-  &--white ~ label.theme-label--white::before,
-  &--white:checked ~ label.theme-label--white::before {
+  &--white + label,
+  &--white + label::before,
+  &--white:checked + label::before {
     color: var(--dark-color);
   }
 
-  &--white:checked ~ label.theme-label--white::before {
+  &--white:checked + label::before {
     box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
       18px 2px, 20px 2px, 2px 4px, 16px 4px, 18px 4px, 20px 4px, 2px 6px,
       14px 6px, 16px 6px, 2px 8px, 4px 8px, 12px 8px, 14px 8px, 2px 10px,
@@ -71,7 +71,7 @@
       4px 16px, 6px 16px, 8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
   }
 
-  &--white:checked:focus ~ label.theme-label--white::before {
+  &--white:checked:focus + label::before {
     color: var(--shadow-color);
     box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
       18px 2px var(--dark-color), 20px 2px var(--dark-color), 2px 4px,
@@ -88,12 +88,12 @@
       8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
   }
 
-  &--dark ~ label.theme-label--dark,
-  &--dark ~ label.theme-label--dark::before {
+  &--dark + label,
+  &--dark + label::before {
     color: var(--white-color);
   }
 
-  &--dark:checked ~ label.theme-label--dark::before {
+  &--dark:checked + label::before {
     color: var(--white-color);
     box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
       18px 2px var(--white-color), 20px 2px var(--white-color), 2px 4px,
@@ -110,7 +110,7 @@
       8px 16px, 10px 16px, 12px 16px, 14px 16px, 16px 16px;
   }
 
-  &--dark:checked:focus ~ label.theme-label--dark::before {
+  &--dark:checked:focus + label::before {
     color: var(--shadow-color);
     box-shadow: 2px 2px, 4px 2px, 6px 2px, 8px 2px, 10px 2px, 12px 2px, 14px 2px,
       18px 2px var(--white-color), 20px 2px var(--white-color), 2px 4px,

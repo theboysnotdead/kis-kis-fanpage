@@ -14,13 +14,13 @@
 
   padding-left: 40px;
 
-  &--white {
+  &[for="white-toggler"] {
     right: 120px;
 
     border-left: 4px solid var(--shadow-color);
   }
 
-  &--dark {
+  &[for="dark-toggler"] {
     right: 20px;
 
     background-color: var(--dark-color);
